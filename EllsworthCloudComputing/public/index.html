@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ellsworth Cloud Computing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Ellsworth Cloud Computing</h1>
+    </header>
+
+    
+    <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="background.html">Background</a></li>
+        <li><a href="riskManagement.html">Risk Management</a></li>
+        <li><a href="projectPlanning.html">Project Planning</a></li>
+        <li><a href="projectEstimates.html">Project Estimates</a></li>
+        <li><a href="citations.html">Citations</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section class="centered">
+        <h2>Up, up, and away...</h2>
+        <p class="aligned-text">
+            The cloud is allowing businesses and technology to exist in areas that were not possible before.
+            Explore this website to learn more about Cloud Computing and how it can benefit your business.
+        </p>
+    </section>
+
+    <!-- Slideshow -->
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <img class="slide" src="images/slide1.jpg" alt="Cloud computing image 1">
+            <img class="slide" src="images/slide2.jpg" alt="Cloud computing image 2">
+            <img class="slide" src="images/slide3.jpg" alt="Cloud computing image 3">
+            <img class="slide" src="images/slide4.jpg" alt="Cloud computing image 4">
+        </div>
+    </section>
+</main>
+
+   
+  <footer>
+    <p>&copy; 2024 Ellsworth Cloud Computing.</p>
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="contact.html">Contact Us</a>
+    </p>
+</footer>
+
+</body>
+</html>
+ <!-- A little bit of JavaScript here I found online to run a slideshow on the main page -->
+<script>
+let currentSlideIndex = 0;
+
+function showSlides() {
+    const slides = document.querySelectorAll(".slide");
+    slides.forEach((slide, index) => {
+        slide.style.display = "none"; // Hide all slides
+    });
+
+    currentSlideIndex++; // Move to the next slide
+    if (currentSlideIndex > slides.length) {
+        currentSlideIndex = 1; // Loop back to the first slide
+    }
+
+    slides[currentSlideIndex - 1].style.display = "block"; // Show current slide
+    setTimeout(showSlides, 5000); // Change slide every 3 seconds
+}
+
+document.addEventListener("DOMContentLoaded", showSlides);
+
+</script>
+
+
+
+
